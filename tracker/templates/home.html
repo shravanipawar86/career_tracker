@@ -1,9 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
      <title>Career Tracker</title>
-     <p1>Track your skills, courses and daily progress.</p1>
-     <link rel="stylesheet" href="/static/css/style.css">
+     <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
 </head>
 <body>
-    
+     <h1>WElcome to Career Tracker!</h1>
+
+     <p1>Track your skills, courses and daily progress.</p1>
+     <button>Get Started</button>
+</body>
+</html>   
