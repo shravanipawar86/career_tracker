@@ -84,3 +84,53 @@ button:hover{
 
 
 }
+.features{
+    max-width: 1000px;
+    margin:80px auto;
+    padding: 20px;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+.feature-card{
+    background-color: #e5eef0;
+    padding: 28px 20px;
+    border: 1px solid #8ba9d0;
+    border-radius: 16px;
+    transition: transform 0.2 ease, box-shadow 0.2 ease;
+}
+.feature-card h3{
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.feature-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+
+}
+.feature-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.10)
+}
+@media(max-width:768px){
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav h2{
+        width: 100px;
+        margin-right: 0;
+
+    }
+    .hero h1{
+        font-size: 36px;
+
+    }
+    .features{
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
