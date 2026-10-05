@@ -1,0 +1,36 @@
+ {% load static %}
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Courses - Career Tracker</title>
+        <link rel="Stylesheet"href="{% static 'css/style.css'%}?v=2">
+    </head>
+    <body>
+        <nav> 
+            <h2>Career Tracker</h2>
+            <a href="/">Home</a>
+            <a href="/skills/">Skills</a>
+            <a href="#">Tasks</a>
+         </nav>
+         <section class="hero">
+         <p>
+            Organize the courses you are taking and track your learning journry.
+         </p>
+         <section class="features">
+            {% for course in  courses %}
+            <div class="feature-card">
+                <h3>{{course.name}}</h3>
+                <p> {{course.description}}</p>
+                <p>Progress: {{course.progress}}%</p>
+                <div class="progress-bar">
+                  <div class="progress-fill"style="width:
+                  {{course.progress}}%,">
+                  </div>
+                </div>
+            </div>
+            {% empty %}
+            <p>No courses added yet.</p>
+            {% endfor %}
+         </section>
+    </body>
+ </html>
